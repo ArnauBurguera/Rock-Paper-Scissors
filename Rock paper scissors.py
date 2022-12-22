@@ -6,14 +6,15 @@ def play():
 
 # r > s, s > p, p > r
 
-    if is_win(user, computer):
-            return("You won!")
-    if not is_win(user, computer):
-            return("Boo, You Lost!") 
-    if user == computer:
+    while user == computer:
         print("It's a tie")
-        play()
-    
+        user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+        computer = random.choice(['r', 'p', 's'])
+        
+    if is_win(user, computer):
+        return("You won!")
+    if not is_win(user, computer):
+        return("Boo, You Lost!") 
 
 def is_win(player, opponent):
     # return true if player wins
