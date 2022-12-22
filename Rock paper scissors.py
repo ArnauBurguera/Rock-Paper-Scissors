@@ -1,14 +1,14 @@
 import random
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors:\n")
     computer = random.choice(['r', 'p', 's'])
 
 # r > s, s > p, p > r
 
     while user == computer:
         print("It's a tie")
-        user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+        user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors:\n")
         computer = random.choice(['r', 'p', 's'])
         
     if is_win(user, computer):
